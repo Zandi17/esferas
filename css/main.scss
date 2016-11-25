@@ -1,0 +1,84 @@
+@import "_variables" ;
+@import "_mixin" ;
+@import "_esfera" ;
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  position: relative;
+  width: 100%;
+  height: 600px;
+
+  .esfera{
+		background: $color-esfera;
+		border-radius: $base-tamanio-esfera/2;
+		height: $base-tamanio-esfera;
+		width: $base-tamanio-esfera;
+		padding: $base-tamanio-esfera/6;
+    display: inline-block;
+    text-shadow: 0 0 10px #222,1px 1px  0 #450505;
+    animation: latidos .5s infinite;
+    transform-origin: center
+  }
+
+  .estrella1{
+  	@include star(35px);
+  	@include center-midle(2%,50%);
+  }
+
+	.estrella2{
+  	@include star-center(30px, 5px);
+  	@include star(20px);
+  	@include center-midle(18%,57%);
+
+  }
+
+  .estrella3{
+  	@include star(18px);
+  	@include star-center(20px, 10px);
+  	@include center-midle(35%,64%);
+  }
+
+  .estrella4{
+  	@include star(15px);
+  	@include star-center(20px, 10px);
+  	@include center-midle(55%,56%);
+  }
+
+  .estrella5{
+  	@include star(12px);
+  	@include star-center(25px, 10px);
+  	@include center-midle(56%,41%);
+  }
+
+  .estrella6{
+  	@include star(10px);
+  	@include star-center(25px, 15px);
+  	@include center-midle(38%,35%);
+  }
+
+  .estrella7{
+  	@include star(10px);
+  	@include star-center(25px, 10px);
+  	@include center-midle(18%,42%);
+  }
+
+	.brillo{
+	    animation:shine 1.4s infinite linear;
+	    -webkit-animation:shine 1.4s infinite linear;
+	}
+	@keyframes shine {
+	    0%{ box-shadow:0 0 26px #f2e602,0 0 14px #f2e602, 0 0 6px #f2e602, 0 0 2px #f2e602; }
+	    50%{ box-shadow:0 0 6px #f2e602,0 0 4px #f2e602, 0 0 6px #f2e602, 0 0 2px #f2e602, inset 0 0 8px rgba(255, 247, 0, 1.0); }
+	    100%{ box-shadow:0 0 26px #f2e602,0 0 14px #f2e602, 0 0 6px #f2e602, 0 0 2px #f2e602; }
+	}
+	@-webkit-keyframes shine {
+	    0%{ box-shadow:0 0 6px #f2e602,0 0 4px #f2e602, 0 0 6px #f2e602, 0 0 2px #f2e602; }
+	    50%{box-shadow:0 0 26px #f2e602,0 0 14px #f2e602, 0 0 6px #f2e602, 0 0 2px #f2e602, inset 0 0 8px rgba(255, 247, 0, 1.0); }
+	    100%{ box-shadow:0 0 6px #f2e602,0 0 4px #f2e602, 0 0 6px #f2e602, 0 0 2px #f2e602; }
+	}
+}
+

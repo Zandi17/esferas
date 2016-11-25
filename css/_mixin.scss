@@ -1,0 +1,28 @@
+@mixin star-center($padding-sides:15px, $padding-tops:25px){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $padding-sides $padding-tops;
+}
+
+@mixin center-midle($top-posicion:50%, $left-posicion:50%) {
+  position: absolute;
+  top: $top-posicion;
+  left: $left-posicion;
+  transform: translate(-$top-posicion/2*(-1), -$left-posicion/2*(-1));
+}
+
+/* @keyframes latidos {
+    from { transform: none; }
+    50% { transform: scale(1.4); }
+    to { transform: none; }
+}
+En la clase corazon vamos a llamar latidos en la animación
+.corazon {
+	display: inline-block;
+	text-shadow: 0 0 10px #222,1px 1px  0 #450505;
+	animation: latidos .5s infinite;
+	transform-origin: center;
+}
+	
+} */
